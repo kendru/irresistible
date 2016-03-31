@@ -3,7 +3,7 @@ FROM ubuntu:15.04
 ADD ./webapp /opt/webapp
 WORKDIR /opt/webapp
 
-RUN apt-get update -yq && apt-get upgrade -yq && apt-get install -yq curl git nano
+RUN apt-get update -yq && apt-get upgrade -yq && apt-get install -yq curl git nano vim
 RUN curl -sL https://deb.nodesource.com/setup | bash - && apt-get install -yq nodejs build-essential
 RUN npm install -g npm
 RUN npm config set registry http://registry.npmjs.org/
